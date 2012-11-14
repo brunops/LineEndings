@@ -10,6 +10,13 @@ Pref = Pref()
 Pref.load()
 s.add_on_change('reload', lambda:Pref.load())
 
+class SetLineEndingsOnLoad(sublime_plugin.EventListener):
+
+	def on_load(self, view):
+		line_ending_type = view.settings().get('set_line_ending_on_load')
+		if line_ending_type:
+			view.run_command('set_line_ending', {"type":line_ending_type})
+
 class StatusBarLineEndings(sublime_plugin.EventListener):
 
 	def on_load(self, view):

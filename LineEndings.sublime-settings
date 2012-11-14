@@ -2,6 +2,8 @@
 	// To show line endings type on status bar
 	"show_line_endings_on_status_bar" : true,
 
+  "set_line_ending_on_load" : "system",
+
 	// show an alert when the line ending is on the list.
 	"alert_when_line_ending_is" : []
 	//example: "alert_when_line_ending_is":["Windows","Unix","CR"]
